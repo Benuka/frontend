@@ -1,6 +1,5 @@
 {
 	"name": "@coreui/coreui-free-react-admin-template",
-	"proxy": "http://127.0.0.1:5000",
 	"version": "3.2.1",
 	"description": "CoreUI React Open Source Bootstrap 4 Admin Template",
 	"author": {
@@ -48,12 +47,12 @@
 		"redux-observable": "^2.0.0",
 		"rxjs": "^7.4.0",
 		"sass": "^1.32.8",
-		"yup": "^0.32.11"
+		"yup": "^0.32.11",
+		"react-scripts": "^4.0.3"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.13.14",
-		"auto-changelog": "~2.2.1",
-		"react-scripts": "^4.0.3"
+		"auto-changelog": "~2.2.1"
 	},
 	"scripts": {
 		"start": "react-scripts start",
@@ -85,7 +84,7 @@
 		]
 	},
 	"engines": {
-		"node": ">=10",
+		"node": "14.18.1",
 		"npm": ">=6"
 	}
 }

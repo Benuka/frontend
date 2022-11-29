@@ -11,7 +11,7 @@ import {
 export const getAllUsersEpic = action$ =>
 	action$.pipe(
 		ofType(GET_USER_LIST_REQUEST),
-		mergeMap(action => from(axios.get('api/users/getall'))
+		mergeMap(action => from(axios.get('https://thawing-caverns-78160.herokuapp.com/api/users/getall'))
 			.pipe(
 				map(response => {
 					return {

@@ -14,7 +14,7 @@ import {
 export const userLoginEpic = action$ =>
 	action$.pipe(
 		ofType(USER_SIGNIN_REQUEST),
-		mergeMap(action => from(axios.post('api/users/signIn', { email: action.payload.email, password: action.payload.password }))
+		mergeMap(action => from(axios.post('https://thawing-caverns-78160.herokuapp.com/api/users/signIn', { email: action.payload.email, password: action.payload.password }))
 			.pipe(
 				map(response => {
 					localStorage.setItem('userInfo', JSON.stringify(response.data));
@@ -34,7 +34,7 @@ export const userLoginEpic = action$ =>
 export const userSignUpEpic = action$ =>
 	action$.pipe(
 		ofType(USER_REGISTER_REQUEST),
-		mergeMap(action => from(axios.post('api/users/signUp', { email: action.payload.email, name: action.payload.name, password: action.payload.password }))
+		mergeMap(action => from(axios.post('https://thawing-caverns-78160.herokuapp.com/api/users/signUp', { email: action.payload.email, name: action.payload.name, password: action.payload.password }))
 			.pipe(
 				map(response => ({
 					type: USER_REGISTER_SUCCESS,
